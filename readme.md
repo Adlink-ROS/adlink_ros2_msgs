@@ -8,7 +8,11 @@ Apache 2.0 (Copyright 2018 ADLINK Technology, Inc.)
 
 ## Compile    
 $ cd ROS2_WS  
-$ ament build --isolated --symlink-install --parallel --only adlink_ros2_msgs  
+$ ament build --isolated --symlink-install --parallel --only adlink_msgs  
+
+## Verify  
+$ ros2 msg list  
+$ ros2 msg show MSG_NAME  
 
 ## ROS 2to1 Bridge Compile
 According to ros_bridge issue 77:  

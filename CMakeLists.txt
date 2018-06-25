@@ -23,6 +23,7 @@ find_package(sensor_msgs REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Person.msg"
   "msg/PersonArray.msg"
+  "msg/PingPong.msg"
   DEPENDENCIES builtin_interfaces std_msgs geometry_msgs
   ADD_LINTER_TESTS
 )
