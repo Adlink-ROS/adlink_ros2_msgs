@@ -1,4 +1,4 @@
-# ADLINK ROS 2.0 Custom Messages  
+# ADLINK ROS 2 Custom Messages  
     
 ## Developers    
 * HaoChih, LIN (haochih.lin@adlinktech.com)  
@@ -20,15 +20,15 @@ https://github.com/ros2/ros1_bridge/issues/77
 
 The way the dynamic_bridge is designed you should not need to specify the mapping in a yaml file if the massage package + name is the same between ros1 and ros2. You should also not need to change anything in the CMakLists or the package.xml of the bridge.  
   
-From the error message it looks like your ROS1 workspace with your custom messages was not sourced when you built the bridge hence the (ROS 1 type '' message)  
+From the error message it looks like your ROS 1 workspace with your custom messages was not sourced when you built the bridge hence the (ROS 1 type '' message)  
 Could you give more details about your setup (what version of the code you are using mostly and maybe also the platform and the rmw implementation you are using).  
 
 Usually when I use custom messages I have:  
 (in our case, custom msg pkg are: adlink_ros_msgs & adlink_ros2_msgs)  
-* a ros2 workspace with just the core of ROS2  
+* a ros2 workspace with just the core of ROS 2  
 * ros1 installed from binaries  
 * an overlay catkin workspace with my custom message package  
-* an overlay ament (ROS2) workspace with my custom message package  
+* an overlay ament (ROS 2) workspace with my custom message package  
   
 The steps I use are:  
 1. in one shell build my ros2 workspace (same as binary installed)  
